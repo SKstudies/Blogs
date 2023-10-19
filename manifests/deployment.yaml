@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fbnmj
+  labels:
+    app: fbnmj
+  namespace: namespace-workflow-1697693063852
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fbnmj
+  template:
+    metadata:
+      labels:
+        app: fbnmj
+    spec:
+      containers:
+        - name: fbnmj
+          image: acrworkflow1697693063852.azurecr.io/image-workflow-1697693063852:latest
+          ports:
+            - containerPort: 3000
