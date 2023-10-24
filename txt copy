@@ -1,0 +1,5 @@
+MONGODB_URI
+mongodb+srv://braveunknown123:hXtmmJaYOMbiFT60@cluster0.nddw6pl.mongodb.net/blog
+
+JWT_SECRET
+MySecretBlog
