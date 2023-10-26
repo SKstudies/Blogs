@@ -2,7 +2,13 @@
 
 ### Links : 
 Synopsis With Screenshots: https://drive.google.com/file/d/1VpGv8THzEndNsOxpTU52o2T0VFpj8qXg/view?usp=sharing
+
 Demo Video + Template: https://drive.google.com/drive/folders/11buUUOqcWXjfAOalLgWIdtyAGVJizOOC?usp=drive_link
+
+ProjectURL: https://azureproject.cloud/  
+
+Default Domain: https://blogappfrt.azurewebsites.net/
+
 
 ### Industry :
 ED-Tech
