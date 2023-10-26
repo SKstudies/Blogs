@@ -1,4 +1,4 @@
-# <a ">Efficient CI/CD Pipeline for Azure Web App Deployment.</a>
+# <a>Efficient CI/CD Pipeline for Azure Web App Deployment.</a>
 
 
 ### Industry :
@@ -9,7 +9,7 @@ ED-Tech
 Efficient CI/CD Pipeline for Azure Web App Deployment.
 
 
-###Overview :
+### Overview :
 The project focuses on solving the problem of manual and error-prone deployment processes for web applications on the Azure platform. It addresses the need for a streamlined, efficient, and reliable deployment workflow.
 
 Core Features:
@@ -24,6 +24,8 @@ Azure Services Utilized:
 The project's purpose is to streamline web application deployment on Azure, making it more efficient, reliable, and error-free. It offers developers a solution that minimizes manual deployment efforts, accelerates the release cycle, and ensures consistent and hassle-free updates and new feature deployments. The integration of multiple Azure services and DevOps practices makes this project a powerful and comprehensive solution for Azure-based web application deployment.
 
 
+### Flow Diagram:
+![Alt Text](images/image1.png)
 
 ### Problem Statementy :
 The project aims to address the challenge of manual and error-prone deployment processes for web applications on the Azure platform. Inefficient deployment practices often result in delays and issues in delivering updates and new features to end-users. This project identifies the problem of manual deployment and seeks to solve it through the implementation of a streamlined Continuous Integration and Continuous Deployment (CI/CD) pipeline. By automating the deployment process, the project mitigates deployment errors, enhances delivery speed, and promotes a more reliable and efficient web application deployment on Azure. This addresses the existing problem of manual and error-prone deployments and offers an opportunity to significantly improve the deployment workflow for web applications hosted on Azure.
@@ -42,7 +44,7 @@ Our project addresses the clear need for efficient, reliable, and consistent web
 2.	Azure App Service: Azure App Service is the platform where we host and run our web application. It provides a managed environment for web app deployment, including auto-scaling, load balancing, and seamless integration with our Docker containers stored in ACR.
 
 
-Other Azure Technologies :
+### Other Azure Technologies :
 1.	Azure DevOps: While not a core Azure service, Azure DevOps plays a crucial role in this project. It is used for setting up the build and release pipelines, automating the CI/CD process, and connecting various components of the project together.
 2.	DNS (for Custom Domain): To enable access to the web application via a custom domain, we utilize Azure DNS for domain name system (DNS) management and resolution. This service ensures proper routing from the custom domain to the Azure App Service hosting our application
 3.	App Service Managed Certificate: Providing SSL certificates for secure communication with the custom domain
