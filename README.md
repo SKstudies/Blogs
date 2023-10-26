@@ -9,6 +9,8 @@ ProjectURL: https://azureproject.cloud/
 
 Default Domain: https://blogappfrt.azurewebsites.net/
 
+(message from developer: if website url is not working then app service is stopped due to expired subscription you can still watch the demo video)
+
 
 ### Industry :
 ED-Tech
