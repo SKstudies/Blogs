@@ -1,5 +1,8 @@
-# <a>Efficient CI/CD Pipeline for Azure Web App Deployment.</a>
+# <a href="https://blogappfrt.azurewebsites.net//">Efficient CI/CD Pipeline for Azure Web App Deployment.</a>
 
+### Links : 
+Synopsis With Screenshots: https://drive.google.com/file/d/1VpGv8THzEndNsOxpTU52o2T0VFpj8qXg/view?usp=sharing
+Demo Video + Template: https://drive.google.com/drive/folders/11buUUOqcWXjfAOalLgWIdtyAGVJizOOC?usp=drive_link
 
 ### Industry :
 ED-Tech
@@ -25,7 +28,19 @@ The project's purpose is to streamline web application deployment on Azure, maki
 
 
 ### Flow Diagram:
-![Alt Text](images/image1.png)
+<a href="https://futurereadytalent.in/"><p align= "center"><img src="https://github.com/SKstudies/Blogs/blob/master/media/Picture1.png"></p></a> 
+
+### Expaination: 
+This project involves creating a seamless deployment pipeline for a web application. It leverages Microsoft Azure services, including Azure Container Registry (ACR), Azure App Service, and Azure DevOps. Here's a breakdown of the key components and steps:
+1.	Azure Container Registry (ACR): An ACR repository is set up to store Docker containers of the web application. The admin user is enabled in the access key tab for easy integration.
+2.	GitHub Repository: The project code is stored in a GitHub repository, providing version control and collaboration capabilities.
+3.	Azure DevOps: Azure DevOps is utilized to automate the build and release processes.
+4.	Build Pipeline: A build pipeline is created in Azure DevOps, which compiles the project code from the GitHub repository, packages it into a Docker container, and stores the container in ACR.
+5.	Azure App Service: An Azure App Service is configured to host the web application using Docker containers. This service provides a scalable and cost-effective hosting solution.
+6.	Deployment Center: The deployment center is accessed from the Azure portal, where the Docker container stored in ACR is deployed to the Azure App Service. This ensures the web application is up and running.
+7.	Release Pipeline: A release pipeline in Azure DevOps automates the deployment of the web application. Whenever changes are committed to the master branch in GitHub, the build and release processes are triggered automatically.
+By automating these processes, the project enhances efficiency, reduces human errors, and allows for easy scaling and continuous integration. The project serves as a model for streamlined web application deployment using Azure services.
+
 
 ### Problem Statementy :
 The project aims to address the challenge of manual and error-prone deployment processes for web applications on the Azure platform. Inefficient deployment practices often result in delays and issues in delivering updates and new features to end-users. This project identifies the problem of manual deployment and seeks to solve it through the implementation of a streamlined Continuous Integration and Continuous Deployment (CI/CD) pipeline. By automating the deployment process, the project mitigates deployment errors, enhances delivery speed, and promotes a more reliable and efficient web application deployment on Azure. This addresses the existing problem of manual and error-prone deployments and offers an opportunity to significantly improve the deployment workflow for web applications hosted on Azure.
