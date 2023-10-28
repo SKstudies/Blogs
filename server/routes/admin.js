@@ -238,7 +238,7 @@ router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
 
 //get method
 //admin registration]
-router.get('/register-admin', authMiddleware, async (req, res) => {
+router.get('/register-admin', async (req, res) => {
   
   try {
     const locals = {
