@@ -28,9 +28,9 @@ Continuous Integration and Continuous Deployment (CI/CD): The project implements
 
 Azure Services Utilized:
 1.	Azure Container Registry (ACR): Used for storing and version-controlling Docker container images.
-2.	Azure App Service: The platform where the web application is hosted, offering auto-scaling and load balancing.
+2.	Azure App Service: The platform where the web application is hosted.
 3.	Azure DevOps Integration: Azure DevOps is used to set up the build and release pipelines, ensuring the seamless automation of the CI/CD process.
-4.	Custom Domain: The project enables access to the web application via a custom domain, leveraging Azure DNS for domain management and resolution.
+4.	Custom Domain: The project enables access to the web application via a custom domain, mapping a custom domain name to app service and using App Service Managed Certificate.
 
 The project's purpose is to streamline web application deployment on Azure, making it more efficient, reliable, and error-free. It offers developers a solution that minimizes manual deployment efforts, accelerates the release cycle, and ensures consistent and hassle-free updates and new feature deployments. The integration of multiple Azure services and DevOps practices makes this project a powerful and comprehensive solution for Azure-based web application deployment.
 
@@ -40,13 +40,14 @@ The project's purpose is to streamline web application deployment on Azure, maki
 
 ### Expaination: 
 This project involves creating a seamless deployment pipeline for a web application. It leverages Microsoft Azure services, including Azure Container Registry (ACR), Azure App Service, and Azure DevOps. Here's a breakdown of the key components and steps:
-1.	Azure Container Registry (ACR): An ACR repository is set up to store Docker containers of the web application. The admin user is enabled in the access key tab for easy integration.
+1.	Azure Container Registry (ACR): An ACR repository is set up to store Docker containers of the web application. It will store the containers created by build pipeline.
 2.	GitHub Repository: The project code is stored in a GitHub repository, providing version control and collaboration capabilities.
 3.	Azure DevOps: Azure DevOps is utilized to automate the build and release processes.
 4.	Build Pipeline: A build pipeline is created in Azure DevOps, which compiles the project code from the GitHub repository, packages it into a Docker container, and stores the container in ACR.
-5.	Azure App Service: An Azure App Service is configured to host the web application using Docker containers. This service provides a scalable and cost-effective hosting solution.
-6.	Deployment Center: The deployment center is accessed from the Azure portal, where the Docker container stored in ACR is deployed to the Azure App Service. This ensures the web application is up and running.
+5.	Azure App Service: An Azure App Service is configured to host the web application using Docker containers. This service provides a scalable and cost-effective hosting solution, as per the requirement I will not be using auto scaling.
+6.	Deployment Center: The deployment center is accessed from the Azure portal it is the part of App Service from where I can manually deploy the container stored in ACR on the App Service.
 7.	Release Pipeline: A release pipeline in Azure DevOps automates the deployment of the web application. Whenever changes are committed to the master branch in GitHub, the build and release processes are triggered automatically.
+
 By automating these processes, the project enhances efficiency, reduces human errors, and allows for easy scaling and continuous integration. The project serves as a model for streamlined web application deployment using Azure services.
 
 
@@ -69,7 +70,7 @@ Our project addresses the clear need for efficient, reliable, and consistent web
 
 ### Other Azure Technologies :
 1.	Azure DevOps: While not a core Azure service, Azure DevOps plays a crucial role in this project. It is used for setting up the build and release pipelines, automating the CI/CD process, and connecting various components of the project together.
-2.	DNS (for Custom Domain): To enable access to the web application via a custom domain, we utilize Azure DNS for domain name system (DNS) management and resolution. This service ensures proper routing from the custom domain to the Azure App Service hosting our application
+2.	DNS (for Custom Domain): The project enables access to the web application via a custom domain, mapping a custom domain name to app service and using App Service Managed Certificate.
 3.	App Service Managed Certificate: Providing SSL certificates for secure communication with the custom domain
 
 
