@@ -73,10 +73,13 @@ Our project addresses the clear need for efficient, reliable, and consistent web
 2.	DNS (for Custom Domain): The project enables access to the web application via a custom domain, mapping a custom domain name to app service and using App Service Managed Certificate.
 3.	App Service Managed Certificate: Providing SSL certificates for secure communication with the custom domain
 
-
+### Complete Step By Step Process :
+1. Create Container Repository:
 ![Alt text](<media/Process Screenshots/Screenshot (528).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (529).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (530).png>)
+
+2. Use Azure Devops Portal For Creating Service Connections From Devops To Github and ACR.
 ![Alt text](<media/Process Screenshots/Screenshot (531).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (532).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (533).png>)
@@ -86,8 +89,12 @@ Our project addresses the clear need for efficient, reliable, and consistent web
 ![Alt text](<media/Process Screenshots/Screenshot (537).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (538).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (539).png>)
+
+3. Push The Code To Github Repo Which Should Contain the Required Docker File.
 ![Alt text](<media/Process Screenshots/Screenshot (540).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (541).png>)
+
+4. Create Build Pipeline To Create And Store The Docker Container In ACR.
 ![Alt text](<media/Process Screenshots/Screenshot (543).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (544).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (545).png>)
@@ -99,19 +106,29 @@ Our project addresses the clear need for efficient, reliable, and consistent web
 ![Alt text](<media/Process Screenshots/Screenshot (551).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (552).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (553).png>)
+
+5. Docker Container Stored In The Repository.
 ![Alt text](<media/Process Screenshots/Screenshot (554).png>)
+
+6. Allow Access. 
 ![Alt text](<media/Process Screenshots/Screenshot (555).png>)
+
+7. Create Web App.
 ![Alt text](<media/Process Screenshots/Screenshot (587).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (588).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (589).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (591).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (592).png>)
+
+8. Establish The Required Environment And Deploy.
 ![Alt text](<media/Process Screenshots/Screenshot (593).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (594).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (595).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (596).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (597).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (598).png>)
+
+9. Create Release Pipeline.
 ![Alt text](<media/Process Screenshots/Screenshot (599).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (600).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (601).png>)
@@ -124,20 +141,41 @@ Our project addresses the clear need for efficient, reliable, and consistent web
 ![Alt text](<media/Process Screenshots/Screenshot (608).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (609).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (610).png>)
+
+10. Search Default Domain If Website Is Running.
 ![Alt text](<media/Process Screenshots/Screenshot (611).png>)
+
+11. Create Custom Domain Scale Up The Plan AS Free Plan Does Not Support Custom Domain.
 ![Alt text](<media/Process Screenshots/Screenshot (612).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (613).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (614).png>)
+
+12. Add A Custom Domain With App Service Managed Certificate.
 ![Alt text](<media/Process Screenshots/Screenshot (623).png>)
 ![Alt text](<media/Process Screenshots/Screenshot (624).png>)
 ![Alt text](<media/Process Screenshots/Screenshots.png>)
 ![Alt text](<media/Process Screenshots/Screenshots1.png>)
+![Alt text](<media/Process Screenshots/Screenshots0.png>)
 ![Alt text](<media/Process Screenshots/Screenshots2.png>)
+
+#### CICD pipeline in action
+13. Commit Changes To github.
 ![Alt text](<media/Process Screenshots/Screenshots3.png>)
+
+
+14. Build Pipline Triggered
 ![Alt text](<media/Process Screenshots/Screenshots4.png>)
+
+15. Containers Created In ACR.
 ![Alt text](<media/Process Screenshots/Screenshots5.png>)
+
+16. Release Pipeline Triggered.
 ![Alt text](<media/Process Screenshots/Screenshots6.png>)
+
+17. Successful Deployment On App Service.
 ![Alt text](<media/Process Screenshots/Screenshots7.png>)
+
+18. Site is Running.
 ![Alt text](<media/Process Screenshots/Screenshots8.png>)
 
 
