@@ -36,7 +36,7 @@ The project's purpose is to streamline web application deployment on Azure, maki
 
 
 ### Flow Diagram:
-<a href="https://futurereadytalent.in/"><p align= "center"><img src="https://github.com/SKstudies/Blogs/blob/master/media/Picture1.png"></p></a> 
+<a href="https://futurereadytalent.in/"><p align= "center"><img src="https://github.com/SKstudies/Blogs/blob/master/media/Picture4.png"></p></a> 
 
 ### Expaination: 
 This project involves creating a seamless deployment pipeline for a web application. It leverages Microsoft Azure services, including Azure Container Registry (ACR), Azure App Service, and Azure DevOps. Here's a breakdown of the key components and steps:
