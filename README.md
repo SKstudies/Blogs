@@ -5,6 +5,10 @@ Synopsis With Screenshots: https://drive.google.com/file/d/1VpGv8THzEndNsOxpTU52
 
 Demo Video + Template: https://drive.google.com/drive/folders/11buUUOqcWXjfAOalLgWIdtyAGVJizOOC?usp=drive_link
 
+Demo Video: https://youtu.be/yl0iNzYorEI
+
+Full Creation Video: (stay tuned comming soon)
+
 ProjectURL: https://azureproject.cloud/  
 
 Default Domain: https://blogappfrt.azurewebsites.net/
