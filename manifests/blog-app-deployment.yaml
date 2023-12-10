@@ -19,7 +19,12 @@ spec:
         - containerPort: 5000
         env:
         - name: MONGODB_URI
-          value: ${{ variables.MONGODB_URI }}
+          value: $(MONGODB_URI)
         - name: JWT_SECRET
-          value: ${{ variables.JWT_SECRET }}
+          value: $(JWT_SECRET)
+# Add an echo command to print the values of the environment variables
+- script: |
+    echo "MONGODB_URI: $(MONGODB_URI)"
+    echo "JWT_SECRET: $(JWT_SECRET)"
+  displayName: 'Print environment variables'
 
