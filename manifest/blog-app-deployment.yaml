@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blog-app
+  template:
+    metadata:
+      labels:
+        app: blog-app
+    spec:
+      containers:
+      - name: blog-app
+        image: skstudies/blog-website:v1.0.0
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGODB_URI
+          value: "mongodb+srv://braveunknown123:hXtmmJaYOMbiFT60@cluster0.nddw6pl.mongodb.net/blog"
+        - name: JWT_SECRET
+          value: "MySecretBlog"
