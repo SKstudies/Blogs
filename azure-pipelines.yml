@@ -17,6 +17,10 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'cicdk8s86968314-auth'
+  - name: MONGODB_URI
+    value: $(MONGODB_URI)
+  - name: JWT_SECRET
+    value: $(JWT_SECRET)
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
