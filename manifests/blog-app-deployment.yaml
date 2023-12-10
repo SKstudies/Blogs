@@ -19,6 +19,12 @@ spec:
         - containerPort: 5000
         env:
         - name: MONGODB_URI
-          value: "mongodb+srv://braveunknown123:hXtmmJaYOMbiFT60@cluster0.nddw6pl.mongodb.net/blog"
+          valueFrom:
+            secretKeyRef:
+              name: blog-app-secrets
+              key: MONGODB_URI
         - name: JWT_SECRET
-          value: "MySecretBlog"
+          valueFrom:
+            secretKeyRef:
+              name: blog-app-secrets
+              key: JWT_SECRET
