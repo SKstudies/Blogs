@@ -50,13 +50,12 @@ stages:
         kubectl create secret generic mongodb-secret --from-literal=MONGODB_URI=$(MONGODB_URI)
         kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=$(JWT_SECRET)
       displayName: 'Create Kubernetes Secrets'
-    dependsOn: Build
 
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: 
   - Build
-  - CreateSecrets  # Add this line to make the Deploy stage depend on CreateSecrets
+  - CreateSecrets
   jobs:
     - deployment: Deploy
       displayName: Deploy
