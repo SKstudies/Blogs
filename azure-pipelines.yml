@@ -17,8 +17,6 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'cicdk8s86968314-auth'
-  MONGODB_URI: '$(MONGODB_URI)'
-  JWT_SECRET: '$(JWT_SECRET)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -77,8 +75,3 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-            env:
-              - name: MONGODB_URI
-                value: $(MONGODB_URI)
-              - name: JWT_SECRET
-                value: $(JWT_SECRET)
