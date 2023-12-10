@@ -19,12 +19,6 @@ spec:
         - containerPort: 5000
         env:
         - name: MONGODB_URI
-          value: $(MONGODB_URI)
+          value: "mongodb+srv://braveunknown123:hXtmmJaYOMbiFT60@cluster0.nddw6pl.mongodb.net/blog"
         - name: JWT_SECRET
-          value: $(JWT_SECRET)
-
-# Add an echo command to print the values of the environment variables
-- script: |
-    echo "MONGODB_URI: $(MONGODB_URI)"
-    echo "JWT_SECRET: $(JWT_SECRET)"
-  displayName: 'Print environment variables'
+          value: "MySecretBlog"
