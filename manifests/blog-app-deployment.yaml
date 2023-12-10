@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: blog-app
-        image: skstudies/blog-website:v1.0.0
+        image: cicdk8s.azurecr.io/skstudiesblogs
         ports:
         - containerPort: 5000
         env:
