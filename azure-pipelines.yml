@@ -1,3 +1,7 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
 trigger:
 - master
 
@@ -5,6 +9,7 @@ resources:
 - repo: self
 
 variables:
+
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '008da5e6-76b5-4e55-b1f5-d6923fccfadc'
   imageRepository: 'skstudiesblogs'
@@ -15,6 +20,7 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
+
 
 stages:
 - stage: Build
@@ -34,53 +40,38 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-
     - upload: manifests
       artifact: manifests
 
-- stage: CreateSecrets
-  displayName: 'Create Kubernetes Secrets'
-  jobs:
-  - job: CreateSecrets
-    displayName: 'Create Secrets'
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - script: |
-        kubectl create secret generic mongodb-secret --from-literal=MONGODB_URI=$(MONGODB_URI)
-        kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=$(JWT_SECRET)
-      displayName: 'Create Kubernetes Secrets'
-
 - stage: Deploy
   displayName: Deploy stage
-  dependsOn: 
-  - Build
-  - CreateSecrets
-  jobs:
-    - deployment: Deploy
-      displayName: Deploy
-      pool:
-        vmImage: $(vmImageName)
-      environment: 'SKstudiesBlogs-9026.default'
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-            - task: KubernetesManifest@0
-              displayName: Create imagePullSecret
-              inputs:
-                action: createSecret
-                secretName: $(imagePullSecret)
-                dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+  dependsOn: Build
 
-            - task: KubernetesManifest@0
-              displayName: Deploy to Kubernetes cluster
-              inputs:
-                action: deploy
-                manifests: |
-                  $(Pipeline.Workspace)/manifests/blog-app-deployment.yaml
-                  $(Pipeline.Workspace)/manifests/blog-app-service.yaml
-                imagePullSecrets: |
-                  $(imagePullSecret)
-                containers: |
-                  $(containerRegistry)/$(imageRepository):$(tag)
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    environment: 'SKstudiesBlogs-9026.default'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: KubernetesManifest@0
+            displayName: Create imagePullSecret
+            inputs:
+              action: createSecret
+              secretName: $(imagePullSecret)
+              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+
+          - task: KubernetesManifest@0
+            displayName: Deploy to Kubernetes cluster
+            inputs:
+              action: deploy
+              manifests: |
+                $(Pipeline.Workspace)/manifests/blog-app-deployment.yaml
+                $(Pipeline.Workspace)/manifests/blog-app-service.yaml
+              imagePullSecrets: |
+                $(imagePullSecret)
+              containers: |
+                $(containerRegistry)/$(imageRepository):$(tag)
